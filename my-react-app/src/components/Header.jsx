@@ -27,6 +27,9 @@ export default function Header() {
           <li>
             <a href="index.html#duvidas">Dúvidas</a>
           </li>
+          <li>
+            <a href="fisioterapia.html">Fisioterapia</a>
+          </li>
         </ul>
       </nav>
 
