@@ -1,0 +1,739 @@
+/* CSS do site PKZ One to One */
+/* Cada pessoa cola a sua parte no final deste arquivo */
+
+/* COMEÇO CÓDIGO - BASE E INÍCIO */
+
+:root {
+  --fundo: #ffffff;
+  --fundo-suave: #f2fbff;
+  --fundo-destaque: #014c6f;
+  --borda: #b3ecff;
+  --texto: #000000;
+  --texto-suave: #014c6f;
+  --rotulo: #014c6f;
+  --destaque: #00bbff;
+  --texto-hero: #ffffff;
+  --texto-hero-suave: #b3ecff;
+  --rodape: #000000;
+  --sobre-rotulo: #ffffff;
+  color-scheme: light;
+  /* Cores fixas (iguais nos dois temas) */
+  --branco: #ffffff;
+  --preto: #000000;
+  --azul-escuro: #014c6f;
+  --azul-claro: #b3ecff;
+  --azul: #00bbff;
+  --azul-noite: #06121a;
+  --erro: #ffd2cc;
+  --sucesso: #b9f5d0;
+  --linha-clara: rgba(255, 255, 255, 0.2);
+  --vidro: rgba(179, 236, 255, 0.1);
+  --font-head: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-body: "Manrope", Arial, sans-serif;
+}
+
+/* Cores do modo escuro */
+:root[data-theme="dark"] {
+  --fundo: #06121a;
+  --fundo-suave: #0b2230;
+  --fundo-destaque: #0b2230;
+  --borda: rgba(179, 236, 255, 0.16);
+  --texto: #ffffff;
+  --texto-suave: #b3ecff;
+  --rotulo: #00bbff;
+  --destaque: #00bbff;
+  --texto-hero: #ffffff;
+  --texto-hero-suave: #b3ecff;
+  --rodape: #000000;
+  --sobre-rotulo: #000000;
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* A #root é onde o React coloca o site */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+main {
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-head);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+/* Tamanhos padrão dos títulos (iguais em todas as páginas) */
+main h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+main h2 {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+/* Contorno de foco para quem navega pelo teclado */
+:focus-visible {
+  outline: 3px solid var(--destaque);
+  outline-offset: 3px;
+}
+
+.secao {
+  padding: 64px 16px;
+}
+
+.secao-cabecalho {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+  color: var(--rotulo);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.destaque {
+  color: var(--destaque);
+}
+
+/* Hero (Início, PKZ, One to One e Equipe) */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: var(--fundo-destaque);
+  color: var(--texto-hero);
+}
+
+.hero .eyebrow {
+  color: var(--texto-hero-suave);
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+}
+
+.hero-texto p {
+  max-width: 560px;
+  color: var(--texto-hero-suave);
+}
+
+.hero .botoes {
+  max-width: none;
+}
+
+/* Foto sempre com o mesmo formato */
+.hero-imagem {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+/* Card de treinador (Início e Equipe) */
+.card-treinador {
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: 24px;
+  border: 1px solid var(--borda);
+  border-radius: 24px;
+  background-color: var(--fundo);
+  transition: border-color 0.2s;
+}
+
+.card-treinador:hover {
+  border-color: var(--destaque);
+}
+
+.card-treinador img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.card-treinador .selo {
+  margin: 16px 20px 8px;
+  padding: 4px 10px;
+}
+
+.card-treinador h3 {
+  margin: 0 20px 6px;
+  font-size: 22px;
+}
+
+.card-treinador p {
+  margin: 0 20px 8px;
+  color: var(--texto-suave);
+  font-size: 14px;
+}
+
+/* Cor do texto dos selos dentro do card */
+.card-treinador .selo-pkz {
+  color: var(--azul-escuro);
+}
+
+.card-treinador .selo-oto {
+  color: var(--branco);
+}
+
+.card-treinador .especialidade {
+  font-weight: 700;
+}
+
+.card-treinador .link-treinar {
+  display: inline-block;
+  margin: 8px 20px 0;
+  color: var(--rotulo);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  main h1 {
+    font-size: 64px;
+  }
+
+  main h2 {
+    font-size: 48px;
+  }
+
+  .secao {
+    padding: 80px 32px;
+  }
+
+  .hero {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero-texto {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .hero-imagem {
+    flex-shrink: 0;
+    width: 42%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  main h1 {
+    font-size: 96px;
+  }
+
+  main h2 {
+    font-size: 64px;
+  }
+
+  .secao {
+    padding: 112px max(24px, calc((100% - 1200px) / 2));
+  }
+
+  .hero-texto p {
+    font-size: 18px;
+  }
+}
+
+/* Para quem prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
+
+/* Estrutura: carrossel (celular) e mosaico (tablet em diante) */
+.estrutura {
+  background-color: var(--fundo-suave);
+}
+
+.carrossel {
+  overflow: hidden;
+  border-radius: 24px;
+  background-color: var(--fundo-destaque);
+}
+
+.carrossel img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.carrossel figcaption {
+  padding: 12px 16px 0;
+  color: var(--azul-claro);
+  font-size: 14px;
+  text-align: center;
+}
+
+.carrossel-botoes {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px 16px 16px;
+}
+
+.carrossel-botoes button {
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--azul-claro);
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--branco);
+}
+
+.carrossel-botoes button:hover {
+  background-color: var(--azul);
+  border-color: var(--azul);
+  color: var(--preto);
+}
+
+.card-visita {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 160px;
+  height: 100%;
+  margin-top: 12px;
+  padding: 20px;
+  border-radius: 24px;
+  background-color: var(--fundo-destaque);
+  color: var(--azul-claro);
+  font-size: 14px;
+  font-weight: 700;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.card-visita h3 {
+  color: var(--branco);
+  font-size: 24px;
+}
+
+.card-visita:hover,
+.card-visita:hover h3 {
+  background-color: var(--azul);
+  color: var(--preto);
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.galeria li {
+  width: calc(50% - 8px);
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 24px;
+  background-color: var(--fundo-destaque);
+}
+
+.galeria .galeria-card {
+  width: 100%;
+  aspect-ratio: auto;
+}
+
+.galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.galeria .card-visita {
+  margin-top: 0;
+}
+
+/* Equipe (resumo) */
+.titulo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  transition: color 0.2s;
+}
+
+.titulo-link i {
+  font-size: 0.6em;
+  color: var(--destaque);
+  transition: transform 0.2s;
+}
+
+.titulo-link:hover {
+  color: var(--rotulo);
+}
+
+.titulo-link:hover i {
+  transform: translateX(6px);
+}
+
+.lista-equipe,
+.grid-treinadores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.lista-equipe li,
+.grid-treinadores li {
+  width: 100%;
+}
+
+/* Localização */
+.localizacao {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: var(--fundo-suave);
+}
+
+.localizacao address {
+  margin-top: 20px;
+  font-style: normal;
+  line-height: 1.8;
+}
+
+.localizacao address i {
+  margin-right: 6px;
+  color: var(--destaque);
+}
+
+.mapa {
+  display: flex;
+  min-height: 300px;
+  overflow: hidden;
+  border: 1px solid var(--borda);
+  border-radius: 24px;
+  background-color: var(--fundo-suave);
+}
+
+.mapa iframe {
+  flex: 1;
+  width: 100%;
+  min-height: 300px;
+  border: 0;
+}
+
+/* Dúvidas (sanfona) */
+.duvidas {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: var(--fundo-destaque);
+  color: var(--branco);
+}
+
+.duvidas .eyebrow {
+  color: var(--azul-claro);
+}
+
+.duvidas-texto p {
+  margin: 16px 0 24px;
+  color: var(--azul-claro);
+}
+
+.lista-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: var(--vidro);
+}
+
+.faq-heading {
+  font-family: var(--font-body);
+  font-size: 16px;
+  text-transform: none;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  min-height: 64px;
+  padding: 16px 20px;
+  border: 0;
+  background-color: transparent;
+  color: var(--branco);
+  font-weight: 700;
+  text-align: left;
+}
+
+/* Pergunta aberta */
+.faq-question[aria-expanded="true"] {
+  background-color: var(--branco);
+  color: var(--azul-escuro);
+}
+
+.faq-icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--azul);
+}
+
+/* Sinal de + que vira - quando abre */
+.faq-icon::before,
+.faq-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  background-color: var(--preto);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.faq-icon::after {
+  transform: translateX(-50%) translateY(-50%) rotate(90deg);
+  transition: transform 0.2s;
+}
+
+.faq-question[aria-expanded="true"] .faq-icon::after {
+  transform: translateX(-50%) translateY(-50%) rotate(0deg);
+}
+
+.faq-panel {
+  padding: 0 20px 20px;
+  background-color: var(--branco);
+  color: var(--preto);
+}
+
+.faq-panel a {
+  color: var(--azul-escuro);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Programas (PKZ ou One to One) */
+.lista-programas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.lista-programas > li {
+  display: flex;
+  width: 100%;
+}
+
+.programa {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--borda);
+  border-radius: 28px;
+  background-color: var(--fundo);
+}
+
+.programa img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.programa > p,
+.programa h3,
+.programa-lista,
+.programa-botao {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.programa-nome {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  color: var(--rotulo);
+  font-family: var(--font-head);
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.programa-idade {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.programa h3 {
+  font-size: 30px;
+}
+
+.programa-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--rotulo);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.programa-lista i {
+  margin-right: 8px;
+  color: var(--destaque);
+}
+
+.programa-botao {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 10px;
+  min-height: 54px;
+  margin-top: auto;
+  margin-bottom: 32px;
+  padding: 0 26px;
+  border-radius: 999px;
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  font-weight: 700;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.programa-botao:hover {
+  background-color: var(--azul);
+  color: var(--preto);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .lista-equipe li,
+  .grid-treinadores li,
+  .lista-programas > li {
+    width: calc(50% - 12px);
+  }
+
+  .localizacao {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .localizacao-texto {
+    width: 40%;
+  }
+
+  .mapa {
+    flex: 1;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  /* Galeria: foto grande à esquerda e 4 menores em 2 colunas */
+  .galeria {
+    flex-direction: column;
+    aspect-ratio: 2 / 1;
+  }
+
+  .galeria li,
+  .galeria .galeria-card {
+    width: calc(25% - 12px);
+    height: calc(50% - 8px);
+    aspect-ratio: auto;
+  }
+
+  .galeria .galeria-principal {
+    width: calc(50% - 8px);
+    height: 100%;
+  }
+
+  .lista-equipe li,
+  .grid-treinadores li {
+    width: calc(33.33% - 16px);
+  }
+
+  .duvidas {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .duvidas-texto {
+    width: 34%;
+  }
+
+  .lista-faq {
+    flex: 1;
+  }
+
+  .programa h3 {
+    font-size: 36px;
+  }
+}
+
+/* FINAL CÓDIGO - BASE E INÍCIO */
