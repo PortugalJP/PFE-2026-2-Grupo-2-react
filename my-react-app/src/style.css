@@ -1035,3 +1035,430 @@ main h2 {
 }
 
 /* FINAL CÓDIGO - ONE TO ONE */
+/* COMEÇO CÓDIGO - AGENDAMENTO */
+
+/* Estrutura da página */
+.agendamento {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px 16px 64px;
+}
+
+.cartao-agenda {
+  padding: 24px 16px;
+  border: 1px solid var(--borda);
+  border-radius: 24px;
+  background-color: var(--cartao);
+}
+
+.cartao-agenda h2 {
+  font-size: 28px;
+}
+
+/* Escolha do programa */
+.escolha-programa {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border: 0;
+}
+
+.opcao-programa {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  padding: 20px;
+  border: 2px solid var(--borda);
+  border-radius: 22px;
+  background-color: var(--fundo-suave);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.opcao-programa:hover {
+  border-color: var(--destaque);
+}
+
+.opcao-programa input {
+  width: 22px;
+  height: 22px;
+}
+
+.opcao-programa b {
+  color: var(--rotulo);
+  font-family: var(--font-head);
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.opcao-programa span {
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Programa escolhido */
+.opcao-programa.escolhido {
+  border-color: var(--rotulo);
+  background-color: var(--cartao);
+}
+
+/* Calendário */
+.calendario-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.calendario-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.calendario-nav button {
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--borda);
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--rotulo);
+}
+
+.calendario-nav button:hover {
+  border-color: var(--destaque);
+}
+
+.calendario-nav button:nth-child(2) {
+  border-color: var(--rotulo);
+  background-color: var(--rotulo);
+  color: var(--sobre-rotulo);
+}
+
+.agendamento button:disabled {
+  opacity: 0.45;
+}
+
+.tabela-calendario {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tabela-calendario th {
+  padding: 6px 0 10px;
+  color: var(--texto-suave);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.tabela-calendario td {
+  padding: 3px;
+}
+
+.tabela-calendario .domingo {
+  color: var(--texto-suave);
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+.dia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  min-height: 44px;
+  border: 1.5px solid var(--borda);
+  border-radius: 10px;
+  background-color: var(--fundo-suave);
+  color: var(--texto);
+  font-weight: 700;
+  transition: border-color 0.2s;
+}
+
+.dia:hover {
+  border-color: var(--destaque);
+}
+
+.dia.selecionado {
+  border-color: var(--rotulo);
+  background-color: var(--rotulo);
+  color: var(--sobre-rotulo);
+}
+
+.ponto {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--destaque);
+}
+
+.selecionado .ponto {
+  background-color: var(--branco);
+}
+
+.legenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.legenda span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legenda .ponto {
+  width: 10px;
+  height: 10px;
+}
+
+.quadrado {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background-color: var(--rotulo);
+}
+
+/* Horários */
+.data-texto {
+  margin: 6px 0 16px;
+  color: var(--rotulo);
+  font-weight: 600;
+}
+
+.lista-horarios {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.horario {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 18px;
+  border: 1.5px solid var(--borda);
+  border-radius: 14px;
+  background-color: transparent;
+  color: var(--texto);
+  font-weight: 700;
+  transition: border-color 0.2s;
+}
+
+.horario:hover {
+  border-color: var(--destaque);
+}
+
+.horario span + span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.horario.selecionado {
+  border-color: var(--destaque);
+  background-color: var(--destaque);
+  color: var(--preto);
+}
+
+.horario:disabled {
+  background-color: var(--fundo-suave);
+  color: var(--texto-suave);
+}
+
+/* Resumo e formulário */
+.resumo {
+  border-color: var(--rotulo);
+  background-color: var(--fundo-destaque);
+  color: var(--branco);
+}
+
+.resumo h2 {
+  margin-bottom: 12px;
+}
+
+.resumo dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.resumo dt,
+.resumo dd {
+  width: 50%;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--linha-clara);
+}
+
+.resumo dt {
+  color: var(--azul-claro);
+}
+
+.resumo dd {
+  font-weight: 700;
+  text-align: right;
+}
+
+.resumo label {
+  display: block;
+  margin: 16px 0 8px;
+  color: var(--azul-claro);
+  font-weight: 700;
+}
+
+.resumo input {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 16px;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  background-color: var(--branco);
+  color: var(--preto);
+}
+
+.resumo input:focus {
+  border-color: var(--destaque);
+}
+
+/* Sugestão de correção do e-mail */
+.sugestao-email {
+  margin-top: 8px;
+  color: var(--azul-claro);
+  font-size: 14px;
+}
+
+.sugestao-email button {
+  min-height: 32px;
+  margin-left: 4px;
+  padding: 0 12px;
+  border: 1px solid var(--branco);
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--branco);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sugestao-email button:hover {
+  background-color: var(--branco);
+  color: var(--azul-escuro);
+}
+
+.botao-enviar {
+  width: 100%;
+  min-height: 54px;
+  margin-top: 24px;
+  border: 0;
+  border-radius: 999px;
+  background-color: var(--destaque);
+  color: var(--preto);
+  font-size: 18px;
+  font-weight: 700;
+  transition: background-color 0.2s;
+}
+
+.botao-enviar:hover {
+  background-color: var(--azul-claro);
+}
+
+.mensagem {
+  min-height: 1.4em;
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+.mensagem.erro {
+  color: var(--erro);
+}
+
+.mensagem.sucesso {
+  color: var(--sucesso);
+}
+
+.botao-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 52px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background-color: var(--branco);
+  color: var(--azul-escuro);
+  font-weight: 700;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .agendamento {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding: 56px 32px 96px;
+  }
+
+  .agendamento-titulo,
+  .escolha-programa,
+  .resumo {
+    width: 100%;
+  }
+
+  .escolha-programa {
+    flex-direction: row;
+  }
+
+  .opcao-programa {
+    flex: 1;
+  }
+
+  .calendario {
+    width: calc(60% - 12px);
+  }
+
+  .horarios {
+    width: calc(40% - 12px);
+  }
+
+  .cartao-agenda {
+    padding: 28px;
+  }
+
+  .dia {
+    min-height: 54px;
+    border-radius: 14px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .agendamento {
+    padding: 56px max(24px, calc((100% - 1200px) / 2)) 96px;
+  }
+
+  .calendario {
+    width: calc(42% - 16px);
+  }
+
+  .horarios {
+    width: calc(25% - 16px);
+  }
+
+  .resumo {
+    width: calc(33% - 16px);
+  }
+}
+
+/* FINAL CÓDIGO - AGENDAMENTO */

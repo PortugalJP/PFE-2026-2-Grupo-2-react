@@ -6,6 +6,8 @@ import Pkz from "./pages/pkz.jsx";
 import Header from './components/Header.jsx'
 import OneToOne from './pages/one-to-one.jsx'
 // final da one to one
+import Agendamento from './pages/Agendamento.jsx'
+// final do agendamento
 // Estrutura de todas as páginas: cabeçalho, página da rota atual e rodapé
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
           {/* final da pkz */}
           <Route path="/onetoone" element={<OneToOne />} />
           {/* final da one to one */}
+          <Route path="/agendamento" element={<Agendamento />} />
+          {/* final do agendamento */}
         </Routes>
       </main>
 
