@@ -736,6 +736,90 @@ main h2 {
   }
 }
 
+/* Modo escuro: ajustes para ficar igual ao Figma */
+:root[data-theme="dark"] .hero {
+  background-color: var(--fundo);
+}
+
+:root[data-theme="dark"] .apresentacao-equipe {
+  background-color: var(--fundo-suave);
+}
+
+:root[data-theme="dark"] .duvidas {
+  background-color: var(--fundo);
+}
+
+/* Cards de destaque: azul claro com texto preto */
+:root[data-theme="dark"] .card-visita,
+:root[data-theme="dark"] .card-publico.destaque-card {
+  border-color: var(--azul);
+  background-color: var(--azul);
+  color: var(--preto);
+}
+
+:root[data-theme="dark"] .card-visita h3,
+:root[data-theme="dark"] .card-publico.destaque-card h3,
+:root[data-theme="dark"] .card-publico.destaque-card p,
+:root[data-theme="dark"] .card-publico.destaque-card .numero,
+:root[data-theme="dark"] .passo.destaque-card h3 {
+  color: var(--preto);
+}
+
+/* Selo de idade das páginas de programa */
+:root[data-theme="dark"] .selo-escuro {
+  background-color: var(--azul);
+  color: var(--preto);
+}
+
+/* Links do menu */
+:root[data-theme="dark"] .menu-lista a {
+  color: var(--azul-claro);
+}
+
+:root[data-theme="dark"] .menu-lista a:hover {
+  color: var(--azul);
+}
+
+:root[data-theme="dark"] .menu-lista a.active {
+  color: var(--branco);
+}
+
+/* Dúvidas */
+:root[data-theme="dark"] .duvidas .eyebrow {
+  color: var(--azul);
+}
+
+:root[data-theme="dark"] .faq-item {
+  border: 1px solid rgba(179, 236, 255, 0.12);
+  background-color: rgba(179, 236, 255, 0.06);
+}
+
+:root[data-theme="dark"] .faq-question[aria-expanded="true"],
+:root[data-theme="dark"] .faq-panel {
+  background-color: #123a50;
+  color: var(--branco);
+}
+
+:root[data-theme="dark"] .faq-panel {
+  color: var(--azul-claro);
+}
+
+:root[data-theme="dark"] .faq-panel a {
+  color: var(--azul);
+}
+
+/* Resumo do agendamento */
+:root[data-theme="dark"] .resumo {
+  border-color: rgba(179, 236, 255, 0.2);
+  background-color: #0f2d3f;
+}
+
+:root[data-theme="dark"] .resumo input {
+  border-color: rgba(179, 236, 255, 0.35);
+  background-color: var(--azul-noite);
+  color: var(--branco);
+}
+
 /* FINAL CÓDIGO - BASE E INÍCIO */  
 
 /* COMEÇO CÓDIGO - ONE TO ONE */
@@ -1462,3 +1546,554 @@ main h2 {
 }
 
 /* FINAL CÓDIGO - AGENDAMENTO */
+/* COMEÇO CÓDIGO - PKZ */
+
+/* Público */
+.publico {
+  background-color: var(--fundo-suave);
+}
+
+.publico .secao-cabecalho .selo {
+  margin-top: 16px;
+}
+
+.lista-publico {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-publico {
+  padding: 24px;
+  border: 1px solid var(--borda);
+  border-radius: 24px;
+  background-color: var(--fundo);
+}
+
+.numero {
+  color: var(--rotulo);
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card-publico h3 {
+  margin: 8px 0 10px;
+  font-size: 24px;
+}
+
+.card-publico p {
+  color: var(--texto-suave);
+  font-size: 14px;
+}
+
+.card-publico.destaque-card {
+  border-color: var(--fundo-destaque);
+  background-color: var(--fundo-destaque);
+  color: var(--branco);
+}
+
+.card-publico.destaque-card p {
+  color: var(--azul-claro);
+}
+
+.card-publico.destaque-card .numero {
+  color: var(--azul);
+}
+
+/* História e linha do tempo */
+.historia {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.historia-texto > p {
+  color: var(--texto-suave);
+}
+
+.manifesto {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 24px;
+  background-color: var(--destaque);
+  color: var(--preto);
+}
+
+.manifesto-rotulo {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.manifesto-texto {
+  margin-top: 12px;
+  font-family: var(--font-head);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.linha-do-tempo {
+  padding: 24px;
+  border: 1px solid var(--borda);
+  border-radius: 24px;
+  background-color: var(--fundo);
+}
+
+.linha-do-tempo h3 {
+  margin-bottom: 24px;
+  font-size: 22px;
+}
+
+.linha-do-tempo ol {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Linha vertical que liga os anos */
+.linha-do-tempo ol::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 10px;
+  width: 2px;
+  background-color: var(--borda);
+}
+
+.linha-do-tempo li {
+  position: relative;
+  padding-left: 44px;
+}
+
+/* Bolinha de cada ano */
+.linha-do-tempo li::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  border: 5px solid var(--fundo);
+  border-radius: 50%;
+  background-color: var(--destaque);
+  box-shadow: 0 0 0 2px var(--destaque);
+}
+
+.linha-do-tempo strong {
+  display: block;
+  color: var(--rotulo);
+  font-family: var(--font-head);
+  font-size: 22px;
+}
+
+.linha-do-tempo p {
+  font-size: 14px;
+}
+
+/* Metodologia (também usada na Equipe) */
+.metodologia {
+  background-color: var(--fundo-suave);
+}
+
+.metodologia .nota {
+  max-width: 420px;
+  margin-top: 16px;
+  color: var(--texto-suave);
+  font-size: 14px;
+}
+
+.lista-metodologia {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.passo {
+  padding: 24px;
+  border: 1px solid var(--borda);
+  border-radius: 24px;
+  background-color: var(--fundo);
+}
+
+.passo .numero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--destaque);
+  color: var(--preto);
+  font-size: 20px;
+}
+
+.passo h3 {
+  margin: 16px 0 10px;
+  font-size: 22px;
+}
+
+.passo p {
+  color: var(--texto-suave);
+  font-size: 14px;
+}
+
+/* Último passo em destaque (página Equipe) */
+.passo.destaque-card {
+  border-color: var(--destaque);
+  background-color: var(--destaque);
+}
+
+.passo.destaque-card .numero {
+  background-color: var(--preto);
+  color: var(--branco);
+}
+
+.passo.destaque-card p {
+  color: var(--preto);
+}
+
+/* Banner (liga PKZ e One to One) */
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-top: 1px solid var(--borda);
+}
+
+.banner h2 {
+  font-size: 30px;
+}
+
+.banner-texto p {
+  max-width: 560px;
+  margin-top: 12px;
+  color: var(--texto-suave);
+}
+
+.banner .botoes {
+  margin-top: 0;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .lista-metodologia {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .passo {
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  /* Texto à esquerda e botões à direita */
+  .banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .banner-texto {
+    flex: 1;
+  }
+
+  .banner-botoes {
+    flex-shrink: 0;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .lista-publico {
+    flex-direction: row;
+  }
+
+  .card-publico {
+    flex: 1;
+  }
+
+  .historia {
+    flex-direction: row;
+    align-items: center;
+    gap: 56px;
+  }
+
+  .historia-texto {
+    flex: 1.3;
+  }
+
+  .linha-do-tempo {
+    flex: 1;
+  }
+
+  .manifesto-texto {
+    font-size: 26px;
+  }
+
+  .lista-metodologia {
+    flex-wrap: nowrap;
+  }
+
+  .passo {
+    width: auto;
+    flex: 1;
+  }
+
+  .banner h2 {
+    font-size: 32px;
+  }
+}
+
+/* FINAL CÓDIGO - PKZ */
+
+/* COMEÇO CÓDIGO - FISIOTERAPIA */
+
+.rodape {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 48px 16px;
+  background-color: var(--rodape);
+  color: var(--branco);
+}
+
+.rodape .logo-divisor {
+  background-color: var(--azul-claro);
+}
+
+.rodape-texto {
+  max-width: 320px;
+  margin-top: 16px;
+  color: var(--azul-claro);
+  font-size: 14px;
+}
+
+.rodape .rodape-menu h2 {
+  margin-bottom: 8px;
+  color: var(--destaque);
+  font-family: var(--font-body);
+  font-size: 14px;
+  letter-spacing: 0.12em;
+}
+
+.rodape-menu a,
+.rodape-link {
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.rodape-menu a:hover,
+.rodape-link:hover {
+  color: var(--destaque);
+}
+
+.rodape-link {
+  color: var(--destaque);
+  font-weight: 700;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.tags {
+  margin: 24px 0 0;
+}
+
+.tags li {
+  padding: 6px 14px;
+  border: 1px solid var(--texto-hero-suave);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Fundos das seções */
+.secao.fundo-suave {
+  background-color: var(--fundo-suave);
+}
+
+.secao.fundo-branco {
+  background-color: var(--fundo);
+}
+
+/* Chamada final (azul) */
+.chamada {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: var(--destaque);
+  color: var(--preto);
+}
+
+.chamada-texto p {
+  margin-top: 16px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .rodape {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 48px;
+    padding: 48px 32px;
+  }
+
+  .rodape-marca {
+    flex: 2;
+  }
+
+  .rodape-menu {
+    flex: 1;
+  }
+
+  /* As 3 colunas do rodapé com o mesmo tamanho */
+  .rodape-link {
+    flex: 1;
+    text-align: right;
+  }
+
+  /* Texto à esquerda e botão à direita, no meio da altura */
+  .chamada {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .chamada .botao-escuro {
+    flex-shrink: 0;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .rodape {
+    padding: 64px max(24px, calc((100% - 1200px) / 2));
+  }
+}
+
+.lista-servicos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-servico {
+  padding: 24px;
+  border: 1px solid var(--borda);
+  border-radius: 24px;
+  background-color: var(--fundo);
+}
+
+.icone-servico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background-color: var(--azul-claro);
+  color: var(--azul-escuro);
+}
+
+.card-servico h3 {
+  margin: 16px 0 10px;
+  font-size: 22px;
+}
+
+.card-servico p {
+  color: var(--texto-suave);
+  font-size: 14px;
+}
+
+.servicos .nota {
+  max-width: 420px;
+  margin-top: 16px;
+  color: var(--texto-suave);
+  font-size: 14px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .lista-servicos {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card-servico {
+    width: calc(50% - 8px);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .card-servico {
+    width: calc(33.33% - 11px);
+  }
+}
+
+/* FINAL CÓDIGO - FISIOTERAPIA */
+
+/* COMEÇO CÓDIGO - EQUIPE */
+
+.contadores {
+  display: flex;
+  gap: 32px;
+  color: var(--texto-hero-suave);
+  font-size: 14px;
+}
+
+.contadores strong {
+  display: block;
+  color: var(--destaque);
+  font-family: var(--font-head);
+  font-size: 48px;
+  line-height: 1;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.filtros button {
+  min-height: 44px;
+  padding: 0 20px;
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  background-color: var(--fundo);
+  color: var(--rotulo);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.filtros button:hover {
+  border-color: var(--destaque);
+}
+
+.filtros button.ativo {
+  border-color: var(--destaque);
+  background-color: var(--destaque);
+  color: var(--preto);
+  font-weight: 700;
+}
+
+/* FINAL CÓDIGO - EQUIPE */

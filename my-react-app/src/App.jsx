@@ -8,12 +8,17 @@ import OneToOne from './pages/one-to-one.jsx'
 // final da one to one
 import Agendamento from './pages/Agendamento.jsx'
 // final do agendamento
+import Footer from './components/Footer.jsx'
+import Fisioterapia from './pages/Fisioterapia.jsx'
+// final da fisioterapia
+import Equipe from './pages/Equipe.jsx'
+// final da equipe
 // Estrutura de todas as páginas: cabeçalho, página da rota atual e rodapé
 export default function App() {
   return (
     <>
       {/* cabeçalho */}
-<Header />
+      <Header />
       <main>
         <Routes>
           <Route path="/" element={<Inicio />} />
@@ -24,10 +29,15 @@ export default function App() {
           {/* final da one to one */}
           <Route path="/agendamento" element={<Agendamento />} />
           {/* final do agendamento */}
+          <Route path="/fisioterapia" element={<Fisioterapia />} />
+          {/* final da fisioterapia */}
+          <Route path="/equipe" element={<Equipe />} />
+          {/* final da equipe */}
         </Routes>
       </main>
 
       {/* rodapé */}
+      <Footer />
     </>
   );
 }
