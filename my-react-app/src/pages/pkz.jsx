@@ -16,7 +16,6 @@ export default function Pkz() {
         titulo={<>Alto rendimento desde a <span className="destaque">base</span></>}
         texto="Treinamento complexo e preparação física para crianças e adolescentes que praticam esporte — com foco em performance, coordenação e prevenção de lesões."
         tags={['7 a 15 anos', '16 testes físicos', 'Treinamento complexo']}
-        botao="Agendar aula"
         foto={fotoHero}
         alt="Jovem atleta durante um treino físico"
       />

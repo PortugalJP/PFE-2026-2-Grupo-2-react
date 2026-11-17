@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 
 // Hero das páginas PKZ, One to One e Fisioterapia
-// whatsapp: se vier, o botão principal abre o WhatsApp em vez do agendamento
+// whatsapp: se vier, o botão principal abre o WhatsApp
+// botao: se não vier, a página fica sem o botão principal
 export default function HeroPrograma(props) {
   return (
     <section className="secao hero hero-programa">
@@ -17,7 +18,7 @@ export default function HeroPrograma(props) {
             <a href={props.whatsapp} className="botao" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-whatsapp"></i> {props.botao}
             </a>
-          ) : (
+          ) : props.botao && (
             <Link to="/agendamento" className="botao">{props.botao}</Link>
           )}
           <a href={props.ancora || '#metodologia'} className="botao-contorno-claro">{props.textoAncora || 'Metodologia'}</a>
