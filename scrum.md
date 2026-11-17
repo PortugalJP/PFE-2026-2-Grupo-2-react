@@ -130,7 +130,7 @@ O projeto foi **desenvolvido ao longo das três semanas**, porém ficou **armaze
 
 | Item | Link |
 |---|---|
-| **Site (Vercel)** | https://pfe-2026-2-grupo-2-vanila.vercel.app |
+| **Site (Vercel)** | https://pfe-2026-2-grupo-2-react-eta.vercel.app |
 | **Repositório (GitHub)** | https://github.com/PortugalJP/PFE-2026-2-Grupo-2-react |
 
 
