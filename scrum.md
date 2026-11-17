@@ -132,4 +132,6 @@ O projeto foi **desenvolvido ao longo das três semanas**, porém ficou **armaze
 |---|---|
 | **Site (Vercel)** | https://pfe-2026-2-grupo-2-vanila.vercel.app |
 | **Repositório (GitHub)** | https://github.com/PortugalJP/PFE-2026-2-Grupo-2-react |
-| **Site (Vercel) Sem Agendamento** ||https://pfe-2026-2-grupo-2-react-s-agn.vercel.app |
+
+
+ **Site (Vercel) Sem Agendament:** https://pfe-2026-2-grupo-2-react-s-agn.vercel.app 
