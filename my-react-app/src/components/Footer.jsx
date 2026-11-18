@@ -1,5 +1,4 @@
-import { Link, useLocation } from 'react-router-dom'
-import dadosFisioterapia from '../dados/fisioterapia.js'
+import { Link } from 'react-router-dom'
 import logoPkzBranco from '../assets/PKZ_Horizontal_Branco.svg'
 import logoOtoBranco from '../assets/OneToOne_Branco.svg'
 
@@ -13,10 +12,6 @@ const links = [
 ]
 
 export default function Footer() {
-  // Página atual: na Fisioterapia o contato é pelo WhatsApp
-  const local = useLocation()
-  const naFisioterapia = local.pathname === '/fisioterapia'
-
   return (
     <footer className="rodape">
       <section className="rodape-marca" aria-label="PKZ One to One">
@@ -40,11 +35,7 @@ export default function Footer() {
         </ul>
       </nav>
 
-      {naFisioterapia ? (
-        <a href={dadosFisioterapia.whatsapp} className="rodape-link" target="_blank" rel="noopener noreferrer">WhatsApp →</a>
-      ) : (
-        <Link to="/agendamento" className="rodape-link">Agendamento →</Link>
-      )}
+      <Link to="/agendamento" className="rodape-link">Agendamento →</Link>
     </footer>
   )
 }

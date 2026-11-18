@@ -11,6 +11,7 @@ const nomesDias = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira',
 const opcoesPrograma = [
   { id: 'pkz', nome: 'PKZ', detalhe: 'PKZ · 7 a 15 anos', publico: 'Jovens atletas · 7 a 15 anos', rotulo: 'Nome do atleta' },
   { id: 'onetoone', nome: 'One to One', detalhe: 'One to One · 17 a 90 anos', publico: 'Adultos · 17 a 90 anos', rotulo: 'Seu nome' },
+  { id: 'fisioterapia', nome: 'Fisioterapia', detalhe: 'Fisioterapia · Todas as idades', publico: 'Reabilitação e prevenção · Todas as idades', rotulo: 'Nome do paciente' },
 ]
 
 // Número do WhatsApp (provisório — trocar pelo número real)

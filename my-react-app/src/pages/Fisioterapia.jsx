@@ -17,8 +17,7 @@ export default function Fisioterapia() {
         titulo={<>Volte a se mover <span className="destaque">sem dor</span></>}
         texto="Fisioterapia ortopédica e esportiva no mesmo espaço dos seus treinos: da avaliação à alta, com a equipe da PKZ e da One to One acompanhando o seu retorno."
         tags={['Todas as idades', 'Sessões individuais', 'Avaliação inicial']}
-        botao="WhatsApp"
-        whatsapp={dados.whatsapp}
+        botao="Agendamento"
         ancora="#servicos"
         textoAncora="Serviços"
         foto={fotoHero}
@@ -55,8 +54,7 @@ export default function Fisioterapia() {
 
       <Chamada
         titulo="Pronto para voltar a se mover?"
-        texto="Fale com nossos fisioterapeutas pelo WhatsApp e agende sua avaliação."
-        whatsapp={dados.whatsapp}
+        texto="Escolha a Fisioterapia no agendamento e marque sua avaliação."
       />
     </>
   )

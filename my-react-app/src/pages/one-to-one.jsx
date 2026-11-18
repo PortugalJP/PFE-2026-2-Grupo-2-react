@@ -16,6 +16,7 @@ export default function OneToOne() {
         titulo={<>Treino feito para <span className="destaque">você</span></>}
         texto="Musculação e condicionamento físico personalizados para adultos que buscam saúde, força e qualidade de vida — em qualquer fase da vida."
         tags={['17 a 90 anos', 'Treino individualizado', 'Ajuste de carga a cada sessão']}
+        botao="Agendamento"
         foto={fotoHero}
         alt="Treinadora orientando uma aluna no agachamento com barra"
       />
